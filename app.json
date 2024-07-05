@@ -1,0 +1,20 @@
+{
+    "name": "Yukki Chat Bot",
+    "description": "A simple Chat-Bot written in Pyrogram using MongoDB",
+    "logo": "https://telegra.ph/file/78bc88b883b22024002cd.jpg",
+    "keywords": [
+      "yukki",
+      "mongodb",
+      "python",
+      "pyrogram"
+    ],
+      "buildpacks": [{
+      "url": "heroku/python"
+    }],
+    "formation": {
+      "worker": {
+        "quantity": 1,
+        "size": "free"
+      }
+    }
+}

@@ -1,0 +1,15 @@
+asyncio
+dnspython
+motor
+git+https://github.com/eyMarv/pyroblack
+python-dotenv
+tgcrypto
+gunicorn
+Flask
+uvloop
+requests
+aiohttp
+gitpython
+humanfriendly
+phub
+pornhub-api[aiohttp-backend]
