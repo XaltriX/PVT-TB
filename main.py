@@ -314,7 +314,7 @@ async def terabox_dm(client, message):
                          ril = await client.send_video(-1002117106922, dlink, caption="Indian")
                          file_id = (ril.video.file_id if ril.video else (ril.document.file_id if ril.document else (ril.animation.file_id if ril.animation else (ril.sticker.file_id if ril.sticker else (ril.photo.file_id if ril.photo else ril.audio.file_id if ril.audio else None)))))
                          unique_id = (ril.video.file_unique_id if ril.video else (ril.document.file_unique_id if ril.document else (ril.animation.file_unique_id if ril.animation else (ril.sticker.file_unique_id if ril.sticker else (ril.photo.file_unique_id if ril.photo else ril.audio.file_unique_id if ril.audio else None)))))                         
-                         direct_url = f"https://t.me/Iamaking_bot?start=unqid{unique_id}"
+                         direct_url = f"https://t.me/TeraBox_tEST_BoT?start=unqid{unique_id}"
                          await ril.copy(message.chat.id, caption=f"**Title**: `{name}`\n**Size**: `{size}`\n\n**Direct File Link**: {direct_url}")
                          await nil.edit_text("Completed")
                          await store_file(unique_id, file_id)
