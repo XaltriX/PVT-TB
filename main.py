@@ -36,7 +36,7 @@ rokendb = db.roken
 
 API_ID = "24955235"
 API_HASH = "f317b3f7bbe390346d8b46868cff0de8"
-BOT_TOKEN = "5720319337:AAH2DWngyxymYf4MvfC8-hEuq6jsCIL0X_U"
+BOT_TOKEN = "6883841510:AAHyWn0qv3Mj-r0UIbOsmdJ_tzEAAY6OVvQ"
 
 queue_url = {}
 api = phub.Client()
@@ -357,7 +357,7 @@ async def terabox_group(client, message):
         try:
            await client.send_message(message.from_user.id, ".")
         except:
-           button = InlineKeyboardButton("Click Here", url="https://t.me/Iamaking_bot?start=True")
+           button = InlineKeyboardButton("Click Here", url="https://t.me/TeraBox_tEST_BoT?start=True")
            keyboard = InlineKeyboardMarkup([[button]])
            return await message.reply_text("First start me in private", quote=True, reply_markup=keyboard)
         try:
@@ -398,7 +398,7 @@ async def terabox_group(client, message):
                          ril = await client.send_video(-1002069870125, dlink, caption="Indian")
                          file_id = (ril.video.file_id if ril.video else (ril.document.file_id if ril.document else (ril.animation.file_id if ril.animation else (ril.sticker.file_id if ril.sticker else (ril.photo.file_id if ril.photo else ril.audio.file_id if ril.audio else None)))))
                          unique_id = (ril.video.file_unique_id if ril.video else (ril.document.file_unique_id if ril.document else (ril.animation.file_unique_id if ril.animation else (ril.sticker.file_unique_id if ril.sticker else (ril.photo.file_unique_id if ril.photo else ril.audio.file_unique_id if ril.audio else None)))))                         
-                         direct_url = f"https://t.me/teradlrobot?start=unqid{unique_id}"
+                         direct_url = f"https://t.me/TeraBox_tEST_BoT?start=unqid{unique_id}"
                          await ril.copy(message.from_user.id, caption=f"**Title**: `{name}`\n**Size**: `{size}`\n\n**Direct File Link**: {direct_url}")
                          await nil.edit_text(f"Completed\n\n**File Direct Link**: [Link]({direct_url})", disable_web_page_preview=True)
                          await store_file(unique_id, file_id)
@@ -417,7 +417,7 @@ async def terabox_group(client, message):
                                 ril = await client.send_video(-1002069870125, vid_path, thumb=thumb_path, caption="Indian")
                                 file_id = (ril.video.file_id if ril.video else (ril.document.file_id if ril.document else (ril.animation.file_id if ril.animation else (ril.sticker.file_id if ril.sticker else (ril.photo.file_id if ril.photo else ril.audio.file_id if ril.audio else None)))))
                                 unique_id = (ril.video.file_unique_id if ril.video else (ril.document.file_unique_id if ril.document else (ril.animation.file_unique_id if ril.animation else (ril.sticker.file_unique_id if ril.sticker else (ril.photo.file_unique_id if ril.photo else ril.audio.file_unique_id if ril.audio else None)))))                     
-                                direct_url = f"https://t.me/teradlrobot?start=unqid{unique_id}"
+                                direct_url = f"https://t.me/TeraBox_tEST_BoT?start=unqid{unique_id}"
                                 await ril.copy(message.from_user.id, caption=f"**Title**: `{name}`\n**Size**: `{size}`\n\n**Direct File Link**: {direct_url}")
                                 await nil.edit_text(f"Completed\n\n**File Direct Link**: [Link]({direct_url})", disable_web_page_preview=True)                                
                                 await store_file(unique_id, file_id)
@@ -490,7 +490,7 @@ async def terabox_dm(client, message):
                          ril = await client.send_video(-1002117106922, dlink, caption="Indian")
                          file_id = (ril.video.file_id if ril.video else (ril.document.file_id if ril.document else (ril.animation.file_id if ril.animation else (ril.sticker.file_id if ril.sticker else (ril.photo.file_id if ril.photo else ril.audio.file_id if ril.audio else None)))))
                          unique_id = (ril.video.file_unique_id if ril.video else (ril.document.file_unique_id if ril.document else (ril.animation.file_unique_id if ril.animation else (ril.sticker.file_unique_id if ril.sticker else (ril.photo.file_unique_id if ril.photo else ril.audio.file_unique_id if ril.audio else None)))))                         
-                         direct_url = f"https://t.me/teraboxleechbot?start=unqid{unique_id}"
+                         direct_url = f"https://t.me/TeraBox_tEST_BoT?start=unqid{unique_id}"
                          await ril.copy(message.chat.id, caption=f"**Title**: `{name}`\n**Size**: `{size}`\n\n**Direct File Link**: {direct_url}")
                          await nil.edit_text("Completed")
                          await store_file(unique_id, file_id)
