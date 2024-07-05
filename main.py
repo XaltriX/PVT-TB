@@ -26,7 +26,7 @@ uvloop.install()
 import motor.motor_asyncio
 loop = asyncio.get_event_loop()
 
-client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://Cluster0:Cluster0@cluster0.c07xkuf.mongodb.net/")
+client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://ultroidxTeam:ultroidxTeam@cluster0.gabxs6m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 db = client.nest  # Replace "your_database" with the name of your MongoDB database
 file_collection = db.file
 usersdb = db.users
