@@ -15,24 +15,24 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID", "6"))
-API_HASH = getenv("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
+API_ID = int(getenv("API_ID", "24955235"))
+API_HASH = getenv("API_HASH", "f317b3f7bbe390346d8b46868cff0de8")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "6259808692:AAE7Lt1J2CLvm2A0tN-KRgtB8GqyREmCCD4")
+BOT_TOKEN = getenv("BOT_TOKEN", "5720319337:AAH2DWngyxymYf4MvfC8-hEuq6jsCIL0X_U")
 
 # SUDO USERS
 SUDO_USER = list(
-    map(int, getenv("SUDO_USER", "5545068262").split())
+    map(int, getenv("SUDO_USER", "1837294444").split())
 )  # Input type must be interger
 
 # ADMIN USERS
 ADMIN_USER = list(
-    map(int, getenv("ADMIN_USER", "5545068262").split())
+    map(int, getenv("ADMIN_USER", "1837294444").split())
 )  # Input type must be interger
 
 # Message to display when someone starts your bot
 PRIVATE_START_MESSAGE = getenv(
     "PRIVATE_START_MESSAGE",
-    "Hello! Welcome to Cheems Feedback Bot, Send feedback about our bots here",
+    "Hello! Welcome to NeonGhost Feedback Bot, Send feedback about our bots here",
 )
