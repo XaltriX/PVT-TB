@@ -159,7 +159,7 @@ async def is_join(user_id):
     if user_id in joined:
       return True
     try:
-        await app.get_chat_member(-1001885839902, user_id)  
+        await app.get_chat_member(-1002097822007, user_id)  
    #     await app.get_chat_member(-1001922006659, user_id)
         joined.add(user_id)
         return True
