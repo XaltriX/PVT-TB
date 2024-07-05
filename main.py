@@ -26,7 +26,7 @@ uvloop.install()
 import motor.motor_asyncio
 loop = asyncio.get_event_loop()
 
-client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://video:video@cluster0.suiny.mongodb.net/")
+client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://Cluster0:Cluster0@cluster0.c07xkuf.mongodb.net/")
 db = client.nest  # Replace "your_database" with the name of your MongoDB database
 file_collection = db.file
 usersdb = db.users
@@ -34,9 +34,9 @@ urldb = db.urls
 tokendb = db.token
 rokendb = db.roken
 
-API_ID = "6"
-API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
-BOT_TOKEN = "6708445643:AAElR_1Dwup_61l4GZ0fXNH-y61uRz1EzL0"
+API_ID = "24955235"
+API_HASH = "f317b3f7bbe390346d8b46868cff0de8"
+BOT_TOKEN = "5720319337:AAH2DWngyxymYf4MvfC8-hEuq6jsCIL0X_U"
 
 queue_url = {}
 api = phub.Client()
@@ -194,9 +194,9 @@ async def token_fun(client, message):
         token = await get_token()
         keyboard = InlineKeyboardMarkup([
                  [InlineKeyboardButton("Refresh Token", url=token)],
-                 [InlineKeyboardButton("Video Tutorial", url="https://t.me/AdrinoTutorial/2")]
+                 [InlineKeyboardButton("Video Tutorial", url="https://t.me/HTDTeraBox/7")]
         ])
-        return await message.reply_text("Your Ads Token is expired and needs to be refreshed.\n\nToken Timeout: 12 hours\n\nToken Usage: Pass 1 ad to use the bot for the next 12 hours.\n\nFor Apple users: Copy the token and paste it into your browser.\n\nWatch a video tutorial if you encounter any issues.", reply_markup=keyboard)
+        return await message.reply_text("Your Ads Token is expired and needs to be refreshed.\n\nToken Timeout: 16 hours\n\nToken Usage: Pass 1 ad to use the bot for the next 12 hours.\n\nFor Apple users: Copy the token and paste it into your browser.\n\nWatch a video tutorial if you encounter any issues.", reply_markup=keyboard)
 
 
 @app.on_message(filters.command("stats") & filters.private & filters.user(SUDO_USERS))
@@ -272,7 +272,7 @@ async def terabox_dm(client, message):
         if not urls:
           return await message.reply_text("No Urls Found")
         if not await is_join(message.from_user.id):
-              return await message.reply_text("First Join @CheemsBackup to Use me")
+              return await message.reply_text("First Join @NeonGhost_Networks to Use me")
         if not await tokendb.find_one({"chat_id": message.from_user.id}):
               return await token_fun(client, message)
         try:
@@ -314,7 +314,7 @@ async def terabox_dm(client, message):
                          ril = await client.send_video(-1002117106922, dlink, caption="Indian")
                          file_id = (ril.video.file_id if ril.video else (ril.document.file_id if ril.document else (ril.animation.file_id if ril.animation else (ril.sticker.file_id if ril.sticker else (ril.photo.file_id if ril.photo else ril.audio.file_id if ril.audio else None)))))
                          unique_id = (ril.video.file_unique_id if ril.video else (ril.document.file_unique_id if ril.document else (ril.animation.file_unique_id if ril.animation else (ril.sticker.file_unique_id if ril.sticker else (ril.photo.file_unique_id if ril.photo else ril.audio.file_unique_id if ril.audio else None)))))                         
-                         direct_url = f"https://t.me/teraboxleechbot?start=unqid{unique_id}"
+                         direct_url = f"https://t.me/Iamaking_bot?start=unqid{unique_id}"
                          await ril.copy(message.chat.id, caption=f"**Title**: `{name}`\n**Size**: `{size}`\n\n**Direct File Link**: {direct_url}")
                          await nil.edit_text("Completed")
                          await store_file(unique_id, file_id)
@@ -350,14 +350,14 @@ async def terabox_group(client, message):
         if not urls:
           return await message.reply_text("No Urls Found")
         if not await is_join(message.from_user.id):
-              return await message.reply_text("First Join @CheemsBackup to Use me")
+              return await message.reply_text("First Join @NeonGhost_Networks to Use me")
     
         if not await tokendb.find_one({"chat_id": message.from_user.id}):
               return await token_fun(client, message)
         try:
            await client.send_message(message.from_user.id, ".")
         except:
-           button = InlineKeyboardButton("Click Here", url="https://t.me/teradlrobot?start=True")
+           button = InlineKeyboardButton("Click Here", url="https://t.me/Iamaking_bot?start=True")
            keyboard = InlineKeyboardMarkup([[button]])
            return await message.reply_text("First start me in private", quote=True, reply_markup=keyboard)
         try:
@@ -448,7 +448,7 @@ async def terabox_dm(client, message):
         if not urls:
           return await message.reply_text("No Urls Found")
         if not await is_join(message.from_user.id):
-              return await message.reply_text("First Join @CheemsBackup to Use me")
+              return await message.reply_text("First Join @NeonGhost_Networks to Use me")
         if not await tokendb.find_one({"chat_id": message.from_user.id}):
               return await token_fun(client, message)
         try:          
@@ -556,7 +556,7 @@ link_filter = filters.create(link_fil)
 @app.on_message(link_filter)
 async def options(client, message : Message):
     if not await is_join(message.from_user.id):
-           return await message.reply_text("First Join @CheemsBackup to Use me")
+           return await message.reply_text("First Join @NeonGhost_Networks to Use me")
     asyncio.create_task(download_video(client, message))
 
 
